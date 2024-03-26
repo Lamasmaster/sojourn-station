@@ -117,14 +117,13 @@
 
 /obj/item/part/gun/frame/strelki
 	name = "Strelki frame"
-	desc = "A Strelki rifle frame. The finest among hunters and operators alike, known for building cheap Strelki rifles or more expensive Duty rifles."
+	desc = "A Strelki rifle frame. The finest among hunters and operators alike, known for building cheap Strelki rifles or more expensive Duty and Watchtower rifles."
 	icon_state = "frame_orrifle"
 	result = /obj/item/gun/projectile/automatic/nordwind/strelki
-	gripvars = list(/obj/item/part/gun/grip/wood, /obj/item/part/gun/grip/black)
+	gripvars = list(/obj/item/part/gun/grip/wood, /obj/item/part/gun/grip/black, /obj/item/part/gun/grip/rubber)
 	mechanismvar = /obj/item/part/gun/mechanism/autorifle
 	barrelvars = list(/obj/item/part/gun/barrel/lrifle, /obj/item/part/gun/barrel/srifle)
-	resultvars = list(/obj/item/gun/projectile/automatic/nordwind/strelki, /obj/item/gun/projectile/automatic/duty)
-
+	resultvars = list(/obj/item/gun/projectile/automatic/nordwind/strelki, /obj/item/gun/projectile/automatic/duty, /obj/item/gun/projectile/automatic/nordwind/watchtower)
 
 /obj/item/gun/projectile/automatic/nordwind/watchtower
 	name = "\"Watchtower\" DMR"
@@ -151,4 +150,4 @@
 		)
 	serial_type = "NM"
 
-	gun_parts = null
+	gun_parts = list(/obj/item/part/gun/frame/strelki = 1, /obj/item/part/gun/grip/rubber = 1, /obj/item/part/gun/mechanism/autorifle = 1, /obj/item/part/gun/barrel/lrifle = 1)
