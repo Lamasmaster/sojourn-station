@@ -97,10 +97,23 @@
 
 /obj/item/storage/box/bs_kit/rds_omnicarbine
 	name = "\improper Warthog Omni Primary Kit"
-	desc = "The standard Blackshield equipment kit containing an STS carbine, a powerful and all round deadly rifle that performs well in any circumstance."
+	desc = "The standard Blackshield equipment kit containing a Warthog carbine, a powerful and all round deadly rifle that performs well in any circumstance."
 
 	populate_contents()
 		new /obj/item/gun/projectile/automatic/omnirifle/rds(src)
+		new /obj/item/ammo_magazine/heavy_rifle_408(src)
+		new /obj/item/ammo_magazine/heavy_rifle_408(src)
+		new /obj/item/ammo_magazine/heavy_rifle_408(src)
+		new /obj/item/ammo_magazine/heavy_rifle_408(src)
+		new /obj/item/ammo_magazine/heavy_rifle_408(src)
+		new /obj/item/storage/pouch/ammo(src)
+
+/obj/item/storage/box/bs_kit/longarm
+	name = "\improper Longarm Omni Primary Kit"
+	desc = "The standard Blackshield equipment kit containing a Longarm omnirifle, a powerful weapon suited for a leader."
+
+	populate_contents()
+		new /obj/item/gun/projectile/automatic/omnirifle/scoped(src)
 		new /obj/item/ammo_magazine/heavy_rifle_408(src)
 		new /obj/item/ammo_magazine/heavy_rifle_408(src)
 		new /obj/item/ammo_magazine/heavy_rifle_408(src)
@@ -129,6 +142,20 @@
 
 	populate_contents()
 		new /obj/item/gun/energy/lasercore/militia(src)
+		new /obj/item/cell/medium/high(src)
+		new /obj/item/cell/medium/high(src)
+		new /obj/item/cell/medium/high(src)
+		new /obj/item/cell/medium/high(src)
+		new /obj/item/cell/medium/high(src)
+		new /obj/item/storage/pouch/tubular(src)
+
+/obj/item/storage/box/bs_kit/gleam
+	name = "\improper Gleam Primary Kit"
+	desc = "A kit holding an energy based weaponry kit. Far more high powered, these custom tooled lascore carbines are the best of power and efficiency. Their cost \
+	prohibits their standardization."
+
+	populate_contents()
+		new /obj/item/gun/energy/lasercore/militia/blaster(src)
 		new /obj/item/cell/medium/high(src)
 		new /obj/item/cell/medium/high(src)
 		new /obj/item/cell/medium/high(src)
@@ -186,6 +213,19 @@
 		new /obj/item/ammo_magazine/speed_loader_shotgun(src)
 		new /obj/item/ammo_magazine/speed_loader_shotgun(src)
 		new /obj/item/ammo_magazine/speed_loader_shotgun(src)
+		new /obj/item/storage/pouch/ammo(src)
+
+/obj/item/storage/box/bs_kit/hustler
+	name = "\improper Hustler Primary Kit"
+	desc = "The standard Blackshield equipment kit containing a Hustler breaching shotgun. A modification to the standard Omnirifle for CQB."
+
+	populate_contents()
+		new /obj/item/gun/projectile/automatic/omnirifle/hustler(src)
+		new /obj/item/ammo_magazine/sbaw(src)
+		new /obj/item/ammo_magazine/sbaw(src)
+		new /obj/item/ammo_magazine/sbaw(src)
+		new /obj/item/ammo_magazine/sbaw(src)
+		new /obj/item/ammo_magazine/sbaw(src)
 		new /obj/item/storage/pouch/ammo(src)
 
 /obj/item/storage/box/bs_kit/saiga
