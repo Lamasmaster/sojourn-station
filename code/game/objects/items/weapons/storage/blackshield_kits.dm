@@ -97,7 +97,7 @@
 
 /obj/item/storage/box/bs_kit/rds_omnicarbine
 	name = "\improper Warthog Omni Primary Kit"
-	desc = "The standard Blackshield equipment kit containing an STS carbine, a powerful and all round deadly rifle that performs well in any circumstance."
+	desc = "The standard Blackshield equipment kit containing a Warthog rifle, sleek and modernized version of the regular Omnirifle."
 
 	populate_contents()
 		new /obj/item/gun/projectile/automatic/omnirifle/rds(src)
@@ -124,7 +124,7 @@
 
 /obj/item/storage/box/bs_kit/lascore
 	name = "\improper Lascore Primary Kit"
-	desc = "A kit holding an energy based weaponry kit. Far more high powered, these custom tooled lascore carbines are the best of power and efficiency. Their cost \
+	desc = "A kit designed for energy-based weaponry holding the laser-core rifle. Far more high powered, these custom tooled lascore carbines are the best of power and efficiency. Their cost \
 	prohibits their standardization."
 
 	populate_contents()
