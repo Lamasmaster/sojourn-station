@@ -528,34 +528,7 @@ obj/item/storage/hcases/attackby(obj/item/W, mob/user)
 					to_chat(user, "You have chosen \the [AM].")
 			qdel(src)
 		else
-			stamped = FALSE
-
-
-/obj/item/gunbox/commanding_officer
-	name = "\improper CO equipment kit"
-	desc = "A secure box containing the CO primary weapon."
-	icon = 'icons/obj/storage.dmi'
-	icon_state = "rifle_case"
-
-/obj/item/gunbox/commanding_officer/attack_self(mob/living/user)
-	..()
-	var/stamped
-	if(!stamped)
-		stamped = TRUE
-		var/list/options = list()
-		options["\"Longarm\" - marksman rifle"] = list(/obj/item/gun/projectile/automatic/omnirifle/scoped, /obj/item/ammo_magazine/heavy_rifle_408, /obj/item/ammo_magazine/heavy_rifle_408, /obj/item/ammo_magazine/heavy_rifle_408, /obj/item/ammo_magazine/heavy_rifle_408, /obj/item/ammo_magazine/heavy_rifle_408, /obj/item/storage/pouch/ammo)
-		options["\"Hustler\" - Breacher Shotgun"] = list(/obj/item/gun/projectile/automatic/omnirifle/hustler, /obj/item/ammo_magazine/sbaw, /obj/item/ammo_magazine/sbaw, /obj/item/ammo_magazine/sbaw, /obj/item/ammo_magazine/sbaw, /obj/item/ammo_magazine/sbaw, /obj/item/storage/pouch/ammo)
-		options["\"Gleam\" - Assault Laser"] = list(/obj/item/gun/energy/lasercore/militia/blaster, /obj/item/cell/medium/high, /obj/item/cell/medium/high, /obj/item/cell/medium/high, /obj/item/cell/medium/high, /obj/item/cell/medium/high, /obj/item/storage/pouch/tubular)
-		var/choice = input(user,"What type of equipment?") as null|anything in options
-		if(src && choice)
-			var/list/things_to_spawn = options[choice]
-			for(var/new_type in things_to_spawn)
-				var/atom/movable/AM = new new_type(get_turf(src))
-				if(istype(AM, /obj/item/gun/))
-					to_chat(user, "You have chosen \the [AM].")
-			qdel(src)
-		else
-			stamped = FALSE
+			stamped = FALSE //Remove later
 
 /obj/item/gearbox/traumatizedteam
 	name = "Lifeline Technician's equipment kit"
