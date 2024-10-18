@@ -68,6 +68,8 @@
 				RedeemSargPrimary(I, user)
 			if("Secondary")
 				RedeemSecondary(I, user)
+			if("COPrimary")
+				RedeemCOPrimary(I, user)			
 			if("COSecondary")
 				RedeemCOSecondary(I, user)
 			if("Armor")
@@ -114,11 +116,11 @@
 /obj/machinery/vending/blackshield_kit/proc/RedeemSargPrimary(obj/item/voucher/voucher, mob/redeemer)
 	var/items = list(
 					"STS Para Kit" = /obj/item/storage/box/bs_kit/sts_para,
-					"Cog Kit" = /obj/item/storage/box/bs_kit/cog,
-					"Lascore kit" = /obj/item/storage/box/bs_kit/lascore,
-					"Warthog Omni Kit" = /obj/item/storage/box/bs_kit/rds_omnicarbine,
 					"Vintorez DMR Kit" = /obj/item/storage/box/bs_kit/vintorez,
-					"Saiga Kit" = /obj/item/storage/box/bs_kit/saiga)
+					"Warthog Omni Kit" = /obj/item/storage/box/bs_kit/rds_omnicarbine,
+					"Hustler Kit" = /obj/item/storage/box/bs_kit/hustler,
+					"Cog Kit" = /obj/item/storage/box/bs_kit/cog,
+					"Lascore kit" = /obj/item/storage/box/bs_kit/lascore)
 	var/selection = items[input(redeemer, "Pick your primary weapon", "Blackshield Voucher Redemption") as null|anything in items]
 	if(selection)
 		new selection(loc)
@@ -136,6 +138,19 @@
 					"Sawn-Off Shotgun Kit" = /obj/item/storage/box/bs_kit/sawn_shotgun,
 					"Martin Kit" = /obj/item/storage/box/bs_kit/martin)
 	var/selection = items[input(redeemer, "Pick your side-arm kit", "Blackshield Voucher Redemption") as null|anything in items]
+	if(selection)
+		new selection(loc)
+		qdel(voucher)
+		return TRUE
+	else
+		voucher.stamped = FALSE
+
+/obj/machinery/vending/blackshield_kit/proc/RedeemCOPrimary(obj/item/voucher/voucher, mob/redeemer)
+	var/items = list(
+					"Longarm Kit" = /obj/item/storage/box/bs_kit/longarm,
+					"Saiga Kit" = /obj/item/storage/box/bs_kit/saiga,
+					"Gleam Kit" = /obj/item/storage/box/bs_kit/gleam)
+	var/selection = items[input(redeemer, "Pick your primary weapon", "Blackshield Voucher Redemption") as null|anything in items]
 	if(selection)
 		new selection(loc)
 		qdel(voucher)
