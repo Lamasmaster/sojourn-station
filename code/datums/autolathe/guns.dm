@@ -353,7 +353,7 @@
 	build_path = /obj/item/gun/projectile/automatic/omnirifle
 
 /datum/design/autolathe/gun/rds_omnicarbine
-	name = "H&S BR 8.6x70mm \"Boar\" RDS"
+	name = "H&S BR 8.6x70mm \"Warthog\" RDS"
 	build_path = /obj/item/gun/projectile/automatic/omnirifle/rds
 
 /datum/design/autolathe/gun/scout
